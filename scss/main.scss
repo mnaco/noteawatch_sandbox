@@ -1,12 +1,14 @@
 
 // import helpers
 // ----------------------------------------------------------------------
+/*
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/extends";
 @import "helpers/normalize";
 @import "helpers/grids";
-
+*/
+@import "helpers/normalize";
 
 // import base
 // ----------------------------------------------------------------------
@@ -15,15 +17,18 @@
 
 // import components (fonts, buttons etc)
 // ----------------------------------------------------------------------
-// @import "base/components/fonts";
+/* 
+@import "base/components/fonts"; 
+*/
 
 
 // import modules
 // ----------------------------------------------------------------------
+/*
 @import "base/modules/header";
 @import "base/modules/footer";
 @import "base/modules/navigation";
-
+*/
 
 // import pages
 // ----------------------------------------------------------------------
