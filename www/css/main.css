@@ -457,3 +457,123 @@ th {
   background: #eee;
 }
 */
+body {
+  background: #44484b;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+}
+
+.memosWrapper {
+  width: 100%;
+  margin: 0 auto;
+  background: #44484b;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+}
+
+.rangeBlock {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #8f969c;
+  border-bottom: 1px solid #666b6f;
+  margin: 0;
+  padding: 1em 10px 0 0;
+  position: relative;
+}
+.rangeBlock:before, .rangeBlock:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  height: 100%;
+  width: 3px;
+}
+.rangeBlock:not(.today):before {
+  width: 50px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.rangeBlock.today:after {
+  background: #ff7200;
+}
+.rangeBlock.d3:after {
+  background: #ae4e00;
+}
+.rangeBlock.d7:after {
+  background: #7b3700;
+}
+.rangeBlock .date {
+  float: left;
+  margin-top: 0;
+  padding-left: 12px;
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+  line-height: 1.8em;
+}
+.rangeBlock .date b {
+  display: block;
+  font-weight: normal;
+  font-size: 2.4rem;
+}
+
+.rangeBlock.today .memos {
+  margin: 0;
+}
+
+.memos {
+  margin: 0 0 0 60px;
+  padding: 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.memos li {
+  box-sizing: border-box;
+  background: #2b3135;
+  min-height: 6em;
+  max-height: 8em;
+  margin: 0;
+  padding: .3em;
+  text-align: left;
+  overflow: hidden;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -webkit-align-self: justify;
+      -ms-flex-item-align: justify;
+          align-self: justify;
+  border: 1px solid #626669;
+  border-radius: 10px;
+  margin: 0 0 2% 2%;
+}
+
+.rangeBlock.today {
+  font-size: 2em;
+}
+.rangeBlock.today li {
+  -webkit-flex-basis: 48%;
+      -ms-flex-preferred-size: 48%;
+          flex-basis: 48%;
+}
+
+.rangeBlock.d3 {
+  font-size: 1.6em;
+}
+.rangeBlock.d3 li {
+  -webkit-flex-basis: 31.33%;
+      -ms-flex-preferred-size: 31.33%;
+          flex-basis: 31.33%;
+}
+
+.rangeBlock.d7 {
+  font-size: 1em;
+}
+.rangeBlock.d7 li {
+  -webkit-flex-basis: 23%;
+      -ms-flex-preferred-size: 23%;
+          flex-basis: 23%;
+}
