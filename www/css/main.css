@@ -451,12 +451,13 @@ body {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
+.memos .mix {
+  display: none;
+}
 .memos li {
   position: relative;
   z-index: 1;
   box-sizing: border-box;
-  min-height: 6em;
-  max-height: 8em;
   margin: 0;
   padding: .3em;
   text-align: left;
@@ -505,7 +506,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  background-image: url("/www/img/header_bcgr.jpg");
+  background-image: url("../img/header_bcgr.jpg");
   background-size: 100%;
 }
 .pageHeader .watchers {
@@ -538,6 +539,7 @@ body {
 }
 
 .memoContent {
+  box-sizing: border-box;
   background: #2b3135;
   border: 3px solid #626669;
   border-radius: 10px;

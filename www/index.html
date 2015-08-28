@@ -6,6 +6,9 @@
 		<link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 		<script src=""></script>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+		<script src="js/main.js"></script>
 	</head>
 	<body>
         
@@ -14,10 +17,21 @@
             
             <div class="watchers">
                 <ul>
-                    <li><img src="img/avatars/p.jpg" alt="" data-label-notification="3"/></li>
-                    <li><img src="img/avatars/m.jpg" alt="" /></li>
-                    <li><img src="img/avatars/s.jpg" alt="" /></li>
-                    <li><img src="img/avatars/d.jpg" alt="" /></li>
+                    <li class="filter" data-filter=".dd">
+                        <img src="img/avatars/p.jpg" alt="" data-label-notification="3"/>
+                    </li>
+                    <li class="filter" data-filter=".mm">
+                        <img src="img/avatars/m.jpg" alt="" />
+                    </li>
+                    <li class="filter" data-filter=".sn">
+                        <img src="img/avatars/s.jpg" alt="" />
+                    </li>
+                    <li class="filter" data-filter=".dr">
+                        <img src="img/avatars/d.jpg" alt="" />
+                    </li>
+                    <li class="filter" data-filter="all">
+                        all
+                    </li>
                 </ul>
             </div>
             <h1>Hi there</h1>
@@ -29,14 +43,14 @@
             
             <div class="rangeBlock today">
                 <ul class="memos">
-                    <li>
+                    <li class="mix dd">
                         <div class="memoAvatar"><img src="img/avatars/p.jpg" alt="" /></div>
                         <div class="memoDate"><span class="day">Today</span><span class="time">09:00</span></div>
                         <div class="memoContent"><h3>t1</h3></div>
                         <div class="memoAttachment"></div>
                     </li>
-                    <li>
-                        <div class="memoAvatar"><img src="img/avatars/p.jpg" alt="" /></div>
+                    <li class="mix mm">
+                        <div class="memoAvatar"><img src="img/avatars/m.jpg" alt="" /></div>
                         <!-- <div class="memoDate"><span class="day">27</span><span class="time">THU 18:00</span></div> -->
                         <div class="memoContent">
                             <h3>t2</h3>
@@ -44,13 +58,13 @@
                         </div>
                         <div class="memoAttachment"></div>
                     </li>
-                    <li>
+                    <li class="mix dd">
                         <div class="memoAvatar"><img src="img/avatars/p.jpg" alt="" /></div>
                         <div class="memoDate"><span class="day">Today</span></div>
                         <div class="memoContent"><h3>t3</h3></div>
                         <div class="memoAttachment"></div>
                     </li>
-                    <li>
+                    <li class="mix dd">
                         <div class="memoAvatar"><img src="img/avatars/p.jpg" alt="" /></div>
                         <div class="memoDate"><span class="day">Today</span><span class="time">18:00</span></div>
                         <div class="memoContent"><h3>t4</h3></div>
@@ -64,14 +78,14 @@
 
             <div class="rangeBlock d3">
                 <ul class="memos">
-                     <li>
+                     <li class="mix dd">
                         <div class="memoAvatar"><img src="img/avatars/p.jpg" alt="" /></div>
                         <div class="memoDate"><span class="day">30</span><span class="time">Sun</span></div>
                         <div class="memoContent"><h3>3d1</h3></div>
                         <div class="memoAttachment"></div>
                     </li>
-                    <li>
-                        <div class="memoAvatar"><img src="img/avatars/p.jpg" alt="" /></div>
+                    <li class="mix sn">
+                        <div class="memoAvatar"><img src="img/avatars/s.jpg" alt="" /></div>
                         <div class="memoDate"><span class="day">31</span><span class="time">Mon 09:00</span></div>
                         <div class="memoContent">
                             <h3>3d2</h3>
@@ -79,8 +93,8 @@
                         </div>
                         <div class="memoAttachment"></div>
                     </li>
-                     <li>
-                        <div class="memoAvatar"><img src="img/avatars/p.jpg" alt="" /></div>
+                     <li class="mix sn">
+                        <div class="memoAvatar"><img src="img/avatars/s.jpg" alt="" /></div>
                          <div class="memoDate"><span class="day">01</span><span>Sep</span></span><span class="time">THU  18:30</span></div>
                         <div class="memoContent"><h3>3d3</h3></div>
                         <div class="memoAttachment"></div>
@@ -91,14 +105,14 @@
             
             <div class="rangeBlock d7">
                  <ul class="memos">
-                     <li>
-                        <div class="memoAvatar"><img src="img/avatars/p.jpg" alt="" /></div>
+                     <li class="mix dr">
+                        <div class="memoAvatar"><img src="img/avatars/d.jpg" alt="" /></div>
                         <div class="memoDate"><span class="day">05</span><span>Sep</span><span class="time">18:00</span></div>
                         <div class="memoContent"><h3>7d1</h3></div>
                         <div class="memoAttachment"></div>
                     </li>
-                    <li>
-                        <div class="memoAvatar"><img src="img/avatars/p.jpg" alt="" /></div>
+                    <li class="mix mm">
+                        <div class="memoAvatar"><img src="img/avatars/m.jpg" alt="" /></div>
                         <div class="memoDate"><span class="day">08</span><span>Sep</span><span class="time">THU 18:00</span></div>
                         <div class="memoContent">
                             <h3>7d2</h3>
@@ -106,8 +120,8 @@
                         </div>
                         <div class="memoAttachment"></div>
                     </li>
-                     <li>
-                        <div class="memoAvatar"><img src="img/avatars/p.jpg" alt="" /></div>
+                    <li class="mix mm">
+                        <div class="memoAvatar"><img src="img/avatars/m.jpg" alt="" /></div>
                         <div class="memoDate"><span class="day">10</span><span>Sep</span><span class="time">18:00</span></div>
                         <div class="memoContent"><h3>7d3</h3></div>
                         <div class="memoAttachment"></div>
