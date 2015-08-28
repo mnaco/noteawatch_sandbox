@@ -420,7 +420,7 @@ body {
   color: #8f969c;
   border-bottom: 1px solid #666b6f;
   margin: 0;
-  padding: 1em 10px 0 0;
+  padding: 1em 10px 0 10px;
   position: relative;
 }
 .rangeBlock:before, .rangeBlock:after {
@@ -429,11 +429,7 @@ body {
   top: 0;
   content: '';
   height: 100%;
-  width: 3px;
-}
-.rangeBlock:not(.today):before {
-  width: 50px;
-  background: rgba(0, 0, 0, 0.5);
+  width: 5px;
 }
 .rangeBlock.today:after {
   background: #ff7200;
@@ -444,27 +440,8 @@ body {
 .rangeBlock.d7:after {
   background: #7b3700;
 }
-.rangeBlock .date {
-  float: left;
-  margin-top: 0;
-  padding-left: 12px;
-  font-size: 1rem;
-  display: block;
-  text-align: center;
-  line-height: 1.8em;
-}
-.rangeBlock .date b {
-  display: block;
-  font-weight: normal;
-  font-size: 2.4rem;
-}
-
-.rangeBlock.today .memos {
-  margin: 0;
-}
 
 .memos {
-  margin: 0 0 0 60px;
   padding: 0;
   list-style: none;
   display: -webkit-flex;
@@ -476,8 +453,8 @@ body {
 }
 .memos li {
   position: relative;
+  z-index: 1;
   box-sizing: border-box;
-  background: #2b3135;
   min-height: 6em;
   max-height: 8em;
   margin: 0;
@@ -489,9 +466,10 @@ body {
   -webkit-align-self: justify;
       -ms-flex-item-align: justify;
           align-self: justify;
-  border: 1px solid #626669;
-  border-radius: 10px;
   margin: 0 0 2% 2%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .rangeBlock.today {
@@ -522,6 +500,7 @@ body {
 }
 
 .pageHeader {
+  position: relative;
   min-height: 300px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -529,15 +508,94 @@ body {
   background-image: url("/www/img/header_bcgr.jpg");
   background-size: 100%;
 }
+.pageHeader .watchers {
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+}
+.pageHeader .watchers ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.pageHeader .watchers li {
+  position: relative;
+  margin: 0 10px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+.pageHeader .watchers li img {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 80px;
+}
 
-.timeStamp {
+.memoContent {
+  background: #2b3135;
+  border: 3px solid #626669;
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+}
+
+.memoDate {
+  font-weight: bold;
   position: absolute;
   top: -5px;
-  left: -5px;
-  background: #333;
+  left: 0;
+  line-height: 1;
+  font-size: .6em;
+  text-transform: uppercase;
+  background: black;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: .6em;
 }
-.timeStamp strong {
-  font-size: 1.2em;
+.memoDate > span {
+  padding: 4px 0 0 8px;
+}
+.memoDate > span.day {
+  padding: 2px 0 4px .3em;
+  font-size: 170%;
+}
+.memoDate:before {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.memoAvatar {
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
+.memoAvatar img {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 1.5em;
+  border: 3px solid #fff;
+}
+
+.memoContent {
+  overflow: hidden;
 }
 
 /* 
