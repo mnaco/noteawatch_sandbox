@@ -545,6 +545,7 @@ body {
   border-radius: 10px;
   width: 100%;
   padding: 20px;
+  max-height: 8em;
 }
 
 .memoDate {
@@ -598,6 +599,10 @@ body {
 
 .memoContent {
   overflow: hidden;
+}
+
+.filter.active {
+  border-color: coral !important;
 }
 
 /* 

@@ -51,7 +51,7 @@ body {
 	flex-wrap: wrap;
 	// align-items: flex-start;
 	// justify-content: space-around;
-	
+    
     .mix { display: none; }
     
 	li {
@@ -135,6 +135,7 @@ body {
     border-radius: 10px;
     width: 100%;
     padding: 20px;
+    max-height: 8em;
 }
 
 .memoDate {
@@ -188,4 +189,10 @@ body {
 
 .memoContent {
     overflow: hidden;
+}
+
+
+// mixit style
+.filter {
+    &.active { border-color: coral !important; }
 }
