@@ -406,6 +406,10 @@ body {
   text-align: center;
 }
 
+p {
+  padding: .2em;
+}
+
 .memosWrapper {
   width: 100%;
   margin: 0 auto;
@@ -440,6 +444,17 @@ body {
 .rangeBlock.d7:after {
   background: #7b3700;
 }
+.rangeBlock .rangeTitle {
+  position: absolute;
+  margin: 0 20px;
+  background-color: #44484b;
+  line-height: 1;
+  font-size: 1.4em;
+  padding: 0 .2em;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-top: -1.3em;
+}
 
 .memos {
   padding: 0;
@@ -464,6 +479,9 @@ body {
   -webkit-flex: 0 1 auto;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
   -webkit-align-self: justify;
       -ms-flex-item-align: justify;
           align-self: justify;
@@ -492,7 +510,7 @@ body {
 }
 
 .rangeBlock.d7 {
-  font-size: 1em;
+  font-size: 1.4em;
 }
 .rangeBlock.d7 li {
   -webkit-flex-basis: 23%;
@@ -537,6 +555,9 @@ body {
   border-radius: 50%;
   width: 80px;
 }
+.pageHeader .headerTitle {
+  margin: 0;
+}
 
 .memoContent {
   box-sizing: border-box;
@@ -544,8 +565,11 @@ body {
   border: 3px solid #626669;
   border-radius: 10px;
   width: 100%;
-  padding: 20px;
+  padding: 20px 15px 10px;
   max-height: 8em;
+}
+.memoContent h3 {
+  margin: .2em 0;
 }
 
 .memoDate {

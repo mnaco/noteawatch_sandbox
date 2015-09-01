@@ -5,18 +5,20 @@
 
 
 
-$bbackgroundColor: #44484b;
+$backgroundColor: #44484b;
 
 body { 
-	background: $bbackgroundColor;
+	background: $backgroundColor;
 	font-family: 'Open Sans Condensed', sans-serif;
 	text-align: center;
 }
 
+p { padding: .2em; }
+
 .memosWrapper {
 	width: 100%;
 	margin: 0 auto;
-	background: $bbackgroundColor;
+	background: $backgroundColor;
 	font-family: 'Open Sans Condensed', sans-serif;
 	text-align: center;
 }
@@ -41,6 +43,18 @@ body {
 	&.today:after { background: #ff7200; }
 	&.d3:after { background: #ae4e00; }
 	&.d7:after { background: #7b3700; }
+    
+    .rangeTitle {
+        position: absolute;
+        margin: 0 20px;
+        background-color: $backgroundColor;
+        line-height: 1;
+        font-size: 1.4em;
+        padding: 0 .2em;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin-top: -1.3em;
+    }
 }
 
 
@@ -64,6 +78,7 @@ body {
 		padding: .3em;
 		text-align: left;
 		flex: 0 1 auto;
+        flex-basis: 100%;
 		align-self: justify;
 		margin: 0 0 2% 2%;
         display: flex;
@@ -85,7 +100,7 @@ body {
 }
 
 .rangeBlock.d7 {
-	font-size: 1em;
+	font-size: 1.4em;
 	li { 
 		flex-basis: 23%;
 	}
@@ -126,16 +141,18 @@ body {
             }
         }
     }
+    .headerTitle { margin: 0; }
 }
 
 .memoContent {
     box-sizing: border-box;
     background: #2b3135;
-    border: 3px solid $bbackgroundColor + 30;
+    border: 3px solid $backgroundColor + 30;
     border-radius: 10px;
     width: 100%;
-    padding: 20px;
+    padding: 20px 15px 10px;
     max-height: 8em;
+    h3 { margin: .2em 0; }
 }
 
 .memoDate {
