@@ -407,9 +407,9 @@ th {
   src: local("Open Sans Cond Light"), local("OpenSans-CondensedLight"), url(fonts/font.woff2) format("woff2");
 }
 body {
-  background: #44484b;
   font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;
+  background: #333;
 }
 
 p {
@@ -419,6 +419,14 @@ p {
 h1, h2, h3 {
   color: #fff;
   font-weight: normal;
+}
+
+.bodyWrapper {
+  background: #44484b;
+  max-width: 794px;
+  margin: 0 auto;
+  border: 1px solid #4e5255;
+  border-radius: 5px;
 }
 
 .memosWrapper {
@@ -445,6 +453,7 @@ h1, h2, h3 {
   content: '';
   height: 100%;
   width: 5px;
+  background: #2b3135;
 }
 .rangeBlock.today:after {
   background: #ff7200;
@@ -542,7 +551,6 @@ h1, h2, h3 {
 }
 .pageHeader .headerImg {
   position: absolute;
-  z-index: -1;
   width: 100%;
   height: 100%;
   background-image: url("../img/header_bcgr.jpg");
@@ -587,6 +595,8 @@ h1, h2, h3 {
   width: 100%;
 }
 .pageHeader .headerTitle {
+  position: relative;
+  z-index: 1;
   margin: 0;
 }
 
@@ -657,7 +667,8 @@ h1, h2, h3 {
 }
 
 .filter.active {
-  border-color: coral !important;
+  background: #ff7200 !important;
+  color: #fff;
 }
 
 /* 
